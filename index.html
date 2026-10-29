@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Taqueria La Consentida | Tacos • Wesconnett Blvd, Jacksonville</title>
+<meta name="description" content="Food truck tacos on handmade corn tortillas. Tacos, tortas, huaraches, sopes and more on Wesconnett Blvd, Jacksonville. Call (904) 862-0278.">
+<meta name="theme-color" content="#e4007c">
+<style>
+:root{--pink:#e4007c;--gold:#f6a01a;--teal:#00a6a6;--masa:#fff4e0;--ink:#2b1630;--green:#1c8f4e}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--masa);color:var(--ink);line-height:1.5;padding-bottom:76px}
+.serif{font-family:Georgia,"Times New Roman",serif}
+header{background:var(--ink);color:#fff;padding:.75rem 1.2rem;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
+.logo{font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:1.3rem}
+.logo small{font-style:normal;font-family:system-ui,sans-serif;font-size:.6rem;letter-spacing:2.5px;color:var(--gold);display:block;font-weight:800;margin-bottom:-2px}
+.lang{display:flex;border:2px solid #fff;border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:#fff;font-weight:800;padding:.3rem .7rem;cursor:pointer;font-size:.8rem}
+.lang button.on{background:var(--gold);color:var(--ink)}
+/* papel picado */
+.picado{display:flex;justify-content:center;gap:4px;padding:0 4px;height:62px;position:relative;overflow:hidden}
+.picado:before{content:"";position:absolute;left:0;right:0;top:3px;height:2px;background:#0003}
+.flag{flex:0 0 48px;height:56px;margin-top:4px;clip-path:polygon(0 0,100% 0,100% 82%,88% 100%,75% 82%,62% 100%,50% 82%,38% 100%,25% 82%,12% 100%,0 82%);
+ -webkit-mask:radial-gradient(circle at 50% 42%,#0000 7px,#000 7.5px) ,radial-gradient(circle,#0000 2.5px,#000 3px) 0 0/12px 12px;-webkit-mask-composite:source-in;mask:radial-gradient(circle at 50% 42%,#0000 7px,#000 7.5px),radial-gradient(circle,#0000 2.5px,#000 3px) 0 0/12px 12px;mask-composite:intersect;
+ animation:sway 3s ease-in-out infinite alternate;transform-origin:top center}
+.flag:nth-child(odd){animation-delay:-1.4s}
+@keyframes sway{from{transform:rotate(-2.5deg)}to{transform:rotate(2.5deg)}}
+@media (prefers-reduced-motion:reduce){.flag{animation:none}}
+.hero{background:var(--pink);color:#fff;position:relative;overflow:hidden}
+.hero-inner{max-width:1100px;margin:0 auto;padding:1.6rem 1.3rem 2.6rem;display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;align-items:center;position:relative}
+.kicker{display:inline-block;background:var(--gold);color:var(--ink);font-weight:900;font-size:.75rem;letter-spacing:2px;padding:.3rem .7rem;border-radius:4px;transform:rotate(-2deg)}
+.hero h2{font-family:Georgia,serif;font-size:clamp(2.6rem,11vw,4.8rem);line-height:.92;margin:.8rem 0 .2rem;font-weight:700}
+.hero h2 i{display:block;color:var(--masa)}
+.hero h2 span{color:var(--gold);font-style:italic}
+.hero p{font-size:1.08rem;max-width:30rem;opacity:.96}
+.cta{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.3rem}
+.btn{display:inline-block;padding:.8rem 1.15rem;border-radius:999px;font-weight:900;text-decoration:none;font-size:.95rem}
+.btn.gold{background:var(--gold);color:var(--ink)}.btn.line{border:2px solid #fff;color:#fff}.btn.teal{background:var(--teal);color:#fff}.btn.pink{background:var(--pink);color:#fff}
+.polaroid{background:var(--masa);padding:10px 10px 0;transform:rotate(-3deg);box-shadow:0 20px 40px #0005;max-width:380px;justify-self:end;border-radius:4px}
+.polaroid img{width:100%;height:auto;display:block;aspect-ratio:640/500;object-fit:cover}
+.polaroid figcaption{color:var(--ink);font-family:Georgia,serif;font-style:italic;text-align:center;padding:.5rem 0 .6rem;font-size:.95rem}
+.dots{position:absolute;inset:0;background:radial-gradient(#ffffff22 2px,transparent 2.5px) 0 0/22px 22px;pointer-events:none}
+.band{display:flex;overflow:hidden;background:var(--teal);color:#fff;font-weight:900;letter-spacing:2px;font-size:.85rem;padding:.7rem 0;white-space:nowrap}
+.band div{animation:marq 22s linear infinite;padding-right:2rem}
+@keyframes marq{to{transform:translateX(-100%)}}
+section{padding:3.2rem 1.2rem;max-width:1100px;margin:0 auto}
+h3{font-family:Georgia,serif;font-size:2.1rem;text-align:center;line-height:1.1}
+h3 small{display:block;font-family:system-ui,sans-serif;font-size:.75rem;letter-spacing:3px;color:var(--pink);font-weight:900;margin-bottom:.4rem;text-transform:uppercase}
+.sub{text-align:center;color:#6b5560;margin:.5rem 0 1.5rem}
+.mano{display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:center;background:#fff;border-radius:20px;padding:1.6rem;border:3px dashed var(--gold)}
+.tortilla{width:120px;height:120px;border-radius:50%;background:radial-gradient(circle at 35% 40%,#c98a3b 0 4px,transparent 5px),radial-gradient(circle at 62% 30%,#b97a30 0 3px,transparent 4px),radial-gradient(circle at 55% 65%,#c98a3b 0 5px,transparent 6px),radial-gradient(circle at 30% 70%,#b97a30 0 3px,transparent 4px),radial-gradient(circle,#f3d39a,#e6b768);box-shadow:inset 0 0 0 6px #ecc47e,0 8px 20px #b9783033;display:grid;place-items:center}
+.mano h4{font-family:Georgia,serif;font-size:1.6rem;color:var(--pink);font-style:italic}
+/* meat picker */
+.picker{background:var(--ink);color:#fff;border-radius:20px;padding:1.6rem;display:grid;grid-template-columns:1.1fr .9fr;gap:1.4rem;align-items:center}
+.picker h3{text-align:left;color:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:1rem 0}
+.chips button{border:2px solid var(--gold);background:none;color:#fff;border-radius:999px;padding:.45rem .9rem;font-weight:800;cursor:pointer;font-size:.9rem}
+.chips button.on{background:var(--gold);color:var(--ink)}
+.pick-out{background:#ffffff12;border-radius:14px;padding:1rem 1.1rem;min-height:96px}
+.pick-out b{font-family:Georgia,serif;font-size:1.5rem;color:var(--gold);display:block}
+.pick-out .p{font-weight:900;color:#ff7fbf;margin-top:.3rem}
+.picker img{width:100%;border-radius:14px;max-height:300px;object-fit:cover}
+.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:1.3rem}
+.filters button{padding:9px 15px;border:2px solid var(--pink);background:#fff;border-radius:999px;cursor:pointer;font-weight:800;color:var(--pink);font-size:.88rem}
+.filters button.active{background:var(--pink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.card{background:#fff;border-radius:16px;overflow:hidden;cursor:pointer;box-shadow:0 3px 14px #2b163014;transition:transform .15s;position:relative}
+.card:hover{transform:translateY(-4px)}
+.card .top{height:12px;background:repeating-linear-gradient(90deg,var(--pink) 0 20px,var(--gold) 20px 40px,var(--teal) 40px 60px)}
+.card img{width:100%;height:190px;object-fit:cover;display:block}
+.card-body{padding:1rem 1.1rem 1.1rem}
+.card h4{font-family:Georgia,serif;font-size:1.25rem}
+.card .en{font-size:.8rem;color:#8a7380;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+.card p{font-size:.93rem;color:#4a3a44;margin-top:.3rem}
+.price{color:var(--pink)!important;font-weight:900;font-size:1.05rem!important}
+.more{display:none;margin-top:.6rem;font-size:.88rem;background:var(--masa);border-left:4px solid var(--teal);padding:.55rem .7rem;border-radius:4px}
+.card.open .more{display:block}
+.tap{font-size:.72rem;color:#aa96a2;margin-top:.5rem;text-transform:uppercase;letter-spacing:1px}
+.card.open .tap{display:none}
+.gallery{display:grid;grid-template-columns:1.3fr 1fr .6fr;gap:.7rem;align-items:stretch}
+.gallery img{width:100%;height:280px;object-fit:cover;border-radius:14px}
+.gallery .tile{border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;text-align:center;padding:1rem;font-family:Georgia,serif;font-style:italic;font-size:1.3rem}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.info-box{background:#fff;border-radius:16px;padding:1.3rem;box-shadow:0 3px 14px #2b163014;border-top:6px solid var(--teal)}
+.info-box:nth-child(2){border-top-color:var(--pink)}.info-box:nth-child(3){border-top-color:var(--gold)}
+.info-box strong{display:block;font-weight:900;letter-spacing:1px;text-transform:uppercase;font-size:.85rem;margin-bottom:.5rem;color:var(--teal)}
+.info-box table{width:100%;font-size:.95rem;border-collapse:collapse}.info-box td{padding:3px 0}.info-box td+td{text-align:right}
+.info-box tr.today{font-weight:900;color:var(--pink)}
+#status{display:inline-block;margin-top:.7rem;font-weight:900;padding:.3rem .75rem;border-radius:999px;color:#fff;font-size:.9rem}
+.call-bar{position:fixed;bottom:0;left:0;right:0;background:var(--pink);text-align:center;padding:14px 20px;z-index:200;box-shadow:0 -4px 14px #0004}
+.call-bar a{color:#fff;text-decoration:none;font-weight:900;font-size:1.15rem;letter-spacing:.5px}
+footer{background:var(--ink);color:#d9c9d3;text-align:center;padding:2rem 1rem;font-size:.88rem}
+[data-en]{}
+@media(max-width:760px){
+ .hero-inner,.picker,.info-grid{grid-template-columns:1fr}
+ .polaroid{justify-self:center;max-width:300px}
+ .mano{grid-template-columns:1fr;text-align:center;justify-items:center}
+ .gallery{grid-template-columns:1fr 1fr}.gallery img{height:200px}.gallery img:first-child{grid-column:span 2;height:240px}
+ .picker img{max-height:220px}
+ .flag{flex-basis:40px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><small>TAQUERÍA • FOOD TRUCK</small>La Consentida</div>
+  <div class="lang" role="group" aria-label="Language"><button class="on" data-l="es">ES</button><button data-l="en">EN</button></div>
+</header>
+
+<div class="hero">
+  <div class="dots"></div>
+  <div class="picado" id="picado" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <span class="kicker" data-es="TORTILLAS HECHAS A MANO" data-en="HANDMADE CORN TORTILLAS">TORTILLAS HECHAS A MANO</span>
+      <h2><i>Tacos</i>con <span>cariño.</span></h2>
+      <p data-es="Tacos, tortas, huaraches y sopes desde la troca en Wesconnett Blvd. Abierto todos los días." data-en="Tacos, tortas, huaraches and sopes from the truck on Wesconnett Blvd. Open every day.">Tacos, tortas, huaraches y sopes desde la troca en Wesconnett Blvd. Abierto todos los días.</p>
+      <div class="cta">
+        <a class="btn gold" href="tel:9048620278" data-es="Llamar y Ordenar" data-en="Call to Order">Llamar y Ordenar</a>
+        <a class="btn line" href="#menu" data-es="Ver Menú" data-en="See the Menu">Ver Menú</a>
+      </div>
+    </div>
+    <figure class="polaroid">
+      <img src="images/hero.jpg" alt="Tacos with lime from Taqueria La Consentida" width="640" height="500">
+      <figcaption data-es="De la troca, con limón" data-en="Straight from the truck, with lime">De la troca, con limón</figcaption>
+    </figure>
+  </div>
+</div>
+<div class="band"><div>ASADA ✦ PASTOR ✦ POLLO ✦ CARNITAS ✦ CHORIZO ✦ LENGUA ✦ TORTAS ✦ HUARACHES ✦ SOPES ✦ AGUAS FRESCAS ✦&nbsp;</div><div>ASADA ✦ PASTOR ✦ POLLO ✦ CARNITAS ✦ CHORIZO ✦ LENGUA ✦ TORTAS ✦ HUARACHES ✦ SOPES ✦ AGUAS FRESCAS ✦&nbsp;</div></div>
+
+<section>
+  <div class="mano">
+    <div class="tortilla" aria-hidden="true"></div>
+    <div>
+      <h4 data-es="Hecho a mano" data-en="Made by hand">Hecho a mano</h4>
+      <p data-es="Las tortillas de maíz se hacen a mano. Esa es la diferencia que se nota en cada taco." data-en="The corn tortillas are made by hand. That's the difference you taste in every taco.">Las tortillas de maíz se hacen a mano. Esa es la diferencia que se nota en cada taco.</p>
+    </div>
+  </div>
+</section>
+
+<section id="tacos">
+  <div class="picker">
+    <div>
+      <h3><small style="color:var(--gold)" data-es="ARMA TU ORDEN" data-en="BUILD YOUR ORDER">ARMA TU ORDEN</small><span data-es="Escoge tu carne" data-en="Pick your meat">Escoge tu carne</span></h3>
+      <div class="chips" id="chips">
+        <button class="on" data-k="asada">Asada</button><button data-k="pastor">Pastor</button><button data-k="pollo">Pollo</button><button data-k="carnitas">Carnitas</button><button data-k="chorizo">Chorizo</button><button data-k="lengua">Lengua</button>
+      </div>
+      <div class="pick-out" id="pickout"></div>
+    </div>
+    <img src="images/quesadilla.jpg" alt="Quesadilla from La Consentida" loading="lazy">
+  </div>
+</section>
+
+<section id="menu">
+  <h3><small data-es="EL MENÚ" data-en="THE MENU">EL MENÚ</small><span data-es="De la troca" data-en="From the truck">De la troca</span></h3>
+  <p class="sub" data-es="Toca un platillo para ver más. Precios del menú actual." data-en="Tap any item for details. Prices from the current menu.">Toca un platillo para ver más. Precios del menú actual.</p>
+  <div class="filters">
+    <button class="active" data-filter="all" data-es="Todo" data-en="All">Todo</button>
+    <button data-filter="tacos">Tacos</button>
+    <button data-filter="masa" data-es="Antojitos" data-en="Masa Plates">Antojitos</button>
+    <button data-filter="tortas" data-es="Tortas y Burritos" data-en="Tortas &amp; Burritos">Tortas y Burritos</button>
+    <button data-filter="mas" data-es="Por Libra y Bebidas" data-en="By the Pound &amp; Drinks">Por Libra y Bebidas</button>
+  </div>
+  <div class="grid" id="menu-grid">
+    <div class="card" data-cat="tacos" onclick="this.classList.toggle('open')"><img src="images/hero.jpg" alt="Tacos" loading="lazy">
+      <div class="card-body"><h4>Tacos</h4><div class="en">Asada • Pastor • Pollo • Carnitas • Chorizo</div><p class="price">$3 – $3.50</p>
+      <div class="more" data-es="En tortilla de maíz hecha a mano." data-en="On a handmade corn tortilla.">En tortilla de maíz hecha a mano.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="tacos" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Tacos de Lengua</h4><div class="en">Beef tongue tacos</div><p class="price">$4 – $4.50</p>
+      <div class="more" data-es="Para los que saben." data-en="For those who know.">Para los que saben.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="masa" onclick="this.classList.toggle('open')"><img src="images/quesadilla.jpg" alt="Quesadilla de maíz" loading="lazy" style="object-position:center 30%">
+      <div class="card-body"><h4>Quesadillas de Maíz</h4><div class="en">Corn quesadillas</div><p class="price">$4.75 – $6.50</p>
+      <div class="more" data-es="Hechas con masa de maíz." data-en="Made with corn masa.">Hechas con masa de maíz.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="masa" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Huaraches</h4><div class="en">Oval masa base, topped</div><p class="price">$10 – $11</p>
+      <div class="more" data-es="Pregunta por las carnes del día." data-en="Ask about today's meats.">Pregunta por las carnes del día.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="masa" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Sopes</h4><div class="en">Thick masa cakes, topped</div><p class="price">$3.75</p>
+      <div class="more" data-es="Pide varios y prueba diferentes carnes." data-en="Order a few and try different meats.">Pide varios y prueba diferentes carnes.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="tortas" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Tortas</h4><div class="en">Mexican sandwiches</div><p class="price">$8 • Torta Cubana $10 – $12</p>
+      <div class="more" data-es="La Torta Cubana es la grande." data-en="The Torta Cubana is the big one.">La Torta Cubana es la grande.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="tortas" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Burritos</h4><div class="en">Burritos</div><p class="price">$7.50 – $11</p>
+      <div class="more" data-es="Escoge tu carne." data-en="Choose your meat.">Escoge tu carne.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="tortas" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Albóndigas</h4><div class="en">Meatballs</div><p class="price">$12</p>
+      <div class="more" data-es="Llama para preguntar si hay hoy." data-en="Call to check if they're on today.">Llama para preguntar si hay hoy.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="mas" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Carnitas o Barbacoa por Libra</h4><div class="en">By the pound</div><p class="price">$11 / lb</p>
+      <div class="more" data-es="Perfecto para la familia o una fiesta. Llama antes." data-en="Great for the family or a party. Call ahead.">Perfecto para la familia o una fiesta. Llama antes.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+    <div class="card" data-cat="mas" onclick="this.classList.toggle('open')"><div class="top"></div>
+      <div class="card-body"><h4>Aguas Frescas</h4><div class="en">Fresh fruit waters</div><p class="price">$3.50 – $4.50</p>
+      <div class="more" data-es="Pregunta por los sabores del día." data-en="Ask about today's flavors.">Pregunta por los sabores del día.</div><p class="tap" data-es="Toca para más" data-en="Tap for details">Toca para más</p></div></div>
+  </div>
+</section>
+
+<section>
+  <h3><small data-es="FOTOS" data-en="PHOTOS">FOTOS</small><span data-es="De la troca" data-en="From the truck">De la troca</span></h3>
+  <p class="sub" data-es="Fotos reales de La Consentida." data-en="Real photos from La Consentida.">Fotos reales de La Consentida.</p>
+  <div class="gallery">
+    <img src="images/hero.jpg" alt="Tacos with lime" loading="lazy">
+    <img src="images/quesadilla.jpg" alt="Quesadilla" loading="lazy">
+    <img src="images/tacos2.jpg" alt="Tacos to go" loading="lazy">
+  </div>
+</section>
+
+<section id="visit">
+  <h3><small data-es="VISÍTANOS" data-en="VISIT US">VISÍTANOS</small><span data-es="Dónde y cuándo" data-en="Where &amp; when">Dónde y cuándo</span></h3>
+  <p class="sub" data-es="Llama antes y tu orden estará lista." data-en="Call ahead and your order will be ready.">Llama antes y tu orden estará lista.</p>
+  <div class="info-grid">
+    <div class="info-box"><strong data-es="Horario" data-en="Hours">Horario</strong>
+      <table id="hours">
+        <tr data-d="1"><td data-es="Lunes" data-en="Monday">Lunes</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="2"><td data-es="Martes" data-en="Tuesday">Martes</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="3"><td data-es="Miércoles" data-en="Wednesday">Miércoles</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="4"><td data-es="Jueves" data-en="Thursday">Jueves</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="5"><td data-es="Viernes" data-en="Friday">Viernes</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="6"><td data-es="Sábado" data-en="Saturday">Sábado</td><td>10:30 AM – 9:30 PM</td></tr>
+        <tr data-d="0"><td data-es="Domingo" data-en="Sunday">Domingo</td><td>10:30 AM – 9:30 PM</td></tr>
+      </table>
+      <span id="status"></span>
+    </div>
+    <div class="info-box"><strong data-es="Ubicación" data-en="Location">Ubicación</strong>
+      Taqueria La Consentida (food truck)<br>5431 Wesconnett Blvd<br>Jacksonville, FL 32244<br>
+      <div class="cta"><a class="btn teal" href="https://www.google.com/maps/search/?api=1&query=Taqueria+La+Consentida+5431+Wesconnett+Blvd+Jacksonville+FL+32244" target="_blank" rel="noopener" data-es="Cómo Llegar" data-en="Get Directions">Cómo Llegar</a></div>
+    </div>
+    <div class="info-box"><strong data-es="Ordena por teléfono" data-en="Order by phone">Ordena por teléfono</strong>
+      <span data-es="Llama y pasa a recoger." data-en="Call it in and pick it up.">Llama y pasa a recoger.</span>
+      <div class="cta"><a class="btn pink" href="tel:9048620278">(904) 862-0278</a></div>
+    </div>
+    <div class="info-box"><strong>Facebook</strong>
+      <span data-es="Fotos y novedades de la troca." data-en="Photos and updates from the truck.">Fotos y novedades de la troca.</span>
+      <div class="cta"><a class="btn teal" href="https://www.facebook.com/p/Taqueria-la-Consentida-100067949205522/" target="_blank" rel="noopener">Facebook</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b style="color:#fff">Taqueria La Consentida</b> • 5431 Wesconnett Blvd, Jacksonville, FL 32244 • (904) 862-0278</p>
+  <p style="margin-top:.4rem">Mock site for demonstration • Not the official website</p>
+  <p style="margin-top:.4rem;font-size:.78rem;opacity:.7">Photos: real photos of La Consentida from public listings. See SOURCES.md.</p>
+</footer>
+
+<div class="call-bar"><a href="tel:9048620278"><span data-es="📞 Llamar Ahora" data-en="📞 Call Now">📞 Llamar Ahora</span> • (904) 862-0278</a></div>
+
+<script>
+// papel picado
+(function(){const c=['#f6a01a','#00a6a6','#fff4e0','#7b2cbf','#1c8f4e','#f6a01a','#00a6a6'];const p=document.getElementById('picado');
+ for(let i=0;i<30;i++){const f=document.createElement('div');f.className='flag';f.style.background=c[i%c.length];p.appendChild(f);}})();
+let lang='es';
+const M={asada:{es:'Carne asada',en:'Grilled steak',p:'$3 – $3.50'},pastor:{es:'Al pastor',en:'Marinated pork',p:'$3 – $3.50'},pollo:{es:'Pollo',en:'Chicken',p:'$3 – $3.50'},carnitas:{es:'Carnitas',en:'Slow-cooked pork',p:'$3 – $3.50'},chorizo:{es:'Chorizo',en:'Mexican sausage',p:'$3 – $3.50'},lengua:{es:'Lengua',en:'Beef tongue',p:'$4 – $4.50'}};
+let cur='asada';
+function renderPick(){const m=M[cur];document.getElementById('pickout').innerHTML='<b>'+m.es+'</b><span>'+(lang==='es'?'Taco en tortilla de maíz hecha a mano':m.en+' on a handmade corn tortilla')+'</span><div class="p">'+m.p+(lang==='es'?' c/u':' each')+'</div>';}
+document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#chips button').forEach(x=>x.classList.remove('on'));b.classList.add('on');cur=b.dataset.k;renderPick();}));
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.l;document.documentElement.lang=lang;
+ document.querySelectorAll('.lang button').forEach(x=>x.classList.toggle('on',x===b));
+ document.querySelectorAll('[data-'+lang+']').forEach(e=>e.innerHTML=e.dataset[lang]);renderPick();setStatus();}));
+document.querySelectorAll('.filters button').forEach(btn=>btn.addEventListener('click',()=>{
+ document.querySelectorAll('.filters button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+ const f=btn.dataset.filter;document.querySelectorAll('#menu-grid .card').forEach(c=>c.style.display=(f==='all'||c.dataset.cat===f)?'':'none');}));
+function setStatus(){const now=new Date(new Date().toLocaleString('en-US',{timeZone:'America/New_York'}));const d=now.getDay(),h=now.getHours()+now.getMinutes()/60;
+ const row=document.querySelector('#hours tr[data-d="'+d+'"]');if(row)row.classList.add('today');
+ const s=document.getElementById('status'),open=h>=10.5&&h<21.5;
+ s.textContent=open?(lang==='es'?'● Abierto ahora':'● Open now'):(lang==='es'?'● Cerrado ahora':'● Closed now');s.style.background=open?'#1c8f4e':'#2b1630';}
+renderPick();setStatus();
+</script>
+</body>
+</html>
